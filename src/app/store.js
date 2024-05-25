@@ -1,20 +1,12 @@
 "use client";
 
-import { configureStore } from '@reduxjs/toolkit'
-import tasksReducer from './features/tasks/tasksSlice'
-import { loadState, saveState } from './utils/localStorage'
-
-const preloadedState = loadState()
+import { configureStore } from '@reduxjs/toolkit';
+import tasksReducer from './features/tasks/tasksSlice';
 
 const store = configureStore({
   reducer: {
-    tasks: tasksReducer
+    tasks: tasksReducer,
   },
-  preloadedState
-})
+});
 
-store.subscribe(() => {
-  saveState(store.getState().tasks)
-})
-
-export default store
+export default store;
