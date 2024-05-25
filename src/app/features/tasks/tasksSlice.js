@@ -1,3 +1,5 @@
+"use client";
+
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
 import { fetchTasks } from '../../api/mockApi'
 

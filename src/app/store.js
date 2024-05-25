@@ -1,4 +1,5 @@
-// src/app/store.js
+"use client";
+
 import { configureStore } from '@reduxjs/toolkit'
 import tasksReducer from './features/tasks/tasksSlice'
 import { loadState, saveState } from './utils/localStorage'

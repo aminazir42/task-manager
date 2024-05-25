@@ -1,5 +1,7 @@
-import { Box, Container, Heading } from '@chakra-ui/react'
-import useDarkMode from './hooks/useDarkMode'
+"use client";
+
+import { Box, Container, Heading } from '@chakra-ui/react';
+import useDarkMode from './hooks/useDarkMode';
 
 const Layout = ({ children }) => {
   return (
@@ -18,7 +20,7 @@ const Layout = ({ children }) => {
         </Box>
       </footer>
     </Box>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

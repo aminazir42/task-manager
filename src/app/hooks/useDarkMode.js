@@ -1,3 +1,5 @@
+"use client";
+
 import { useColorMode, Button } from '@chakra-ui/react'
 
 const useDarkMode = () => {

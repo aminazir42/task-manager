@@ -1,23 +1,25 @@
-import { useState } from 'react'
-import { useSelector, useDispatch } from 'react-redux'
-import { removeTask, toggleTaskCompletion, editTask } from '../features/tasks/tasksSlice'
-import { Box, Button, Input, List, ListItem, Text } from '@chakra-ui/react'
+"use client";
+
+import { useState } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { removeTask, toggleTaskCompletion, editTask } from '../features/tasks/tasksSlice';
+import { Box, Button, Input, List, ListItem, Text } from '@chakra-ui/react';
 
 function TaskList() {
-  const tasks = useSelector((state) => state.tasks.tasks)
-  const dispatch = useDispatch()
-  const [isEditing, setIsEditing] = useState(null)
-  const [newText, setNewText] = useState('')
+  const tasks = useSelector((state) => state.tasks.tasks);
+  const dispatch = useDispatch();
+  const [isEditing, setIsEditing] = useState(null);
+  const [newText, setNewText] = useState('');
 
   const handleEdit = (task) => {
-    setIsEditing(task.id)
-    setNewText(task.text)
-  }
+    setIsEditing(task.id);
+    setNewText(task.text);
+  };
 
   const handleSave = (id) => {
-    dispatch(editTask({ id, text: newText }))
-    setIsEditing(null)
-  }
+    dispatch(editTask({ id, text: newText }));
+    setIsEditing(null);
+  };
 
   return (
     <List spacing={3}>
@@ -62,7 +64,7 @@ function TaskList() {
         </ListItem>
       ))}
     </List>
-  )
+  );
 }
 
-export default TaskList
+export default TaskList;
