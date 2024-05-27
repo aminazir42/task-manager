@@ -1,4 +1,3 @@
-// src/providers.js
 "use client";
 
 import { ChakraProvider } from "@chakra-ui/react";

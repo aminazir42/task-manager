@@ -1,4 +1,3 @@
-// src/app/page.js
 "use client";
 
 import Layout from "./layout";
