@@ -14,11 +14,17 @@ export const tasksSlice = createSlice({
     editTask: (state, action) => {
       const index = state.findIndex(task => task.id === action.payload.id);
       if (index !== -1) {
-        state[index].text = action.payload.text;
+        state[index] = action.payload;
+      }
+    },
+    toggleComplete: (state, action) => {
+      const index = state.findIndex(task => task.id === action.payload);
+      if (index !== -1) {
+        state[index].completed = !state[index].completed;
       }
     },
   },
 });
 
-export const { addTask, deleteTask, editTask } = tasksSlice.actions;
+export const { addTask, deleteTask, editTask, toggleComplete } = tasksSlice.actions;
 export default tasksSlice.reducer;
