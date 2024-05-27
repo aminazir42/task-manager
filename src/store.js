@@ -1,3 +1,4 @@
+"use client";
 import { configureStore } from "@reduxjs/toolkit";
 import tasksReducer from "./tasksSlice";
 

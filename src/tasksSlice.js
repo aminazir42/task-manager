@@ -1,4 +1,4 @@
-// src/tasksSlice.js
+"use client";
 import { createSlice } from "@reduxjs/toolkit";
 
 const tasksSlice = createSlice({
