@@ -1,25 +1,18 @@
 // src/app/layout.js
 "use client";
 
-import Providers from "../providers";
+import Navbar from "../components/Navbar";
 import { Box } from "@chakra-ui/react";
-import Head from "next/head";
 
-function Layout({ children }) {
+const Layout = ({ children }) => {
   return (
-    <html lang="en">
-      <Head>
-        <title>Task Manager</title>
-      </Head>
-      <body>
-        <Providers>
-          <Box p={4}>
-            {children}
-          </Box>
-        </Providers>
-      </body>
-    </html>
+    <Box>
+      <Navbar />
+      <Box p={4}>
+        {children}
+      </Box>
+    </Box>
   );
-}
+};
 
 export default Layout;
