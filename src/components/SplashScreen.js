@@ -1,4 +1,3 @@
-// src/components/SplashScreen.js
 import { Box, Image } from "@chakra-ui/react";
 
 function SplashScreen() {

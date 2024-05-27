@@ -1,4 +1,3 @@
-// src/app/page.js
 import Layout from "./layout";
 import TaskManager from "../components/TaskManager";
 import SplashScreen from "../components/SplashScreen";

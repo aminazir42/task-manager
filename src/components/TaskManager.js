@@ -1,4 +1,3 @@
-// src/components/TaskManager.js
 import { useDispatch, useSelector } from "react-redux";
 import { addTask, deleteTask, editTask } from "../tasksSlice";
 import { useState } from "react";
