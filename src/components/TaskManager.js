@@ -1,4 +1,6 @@
+// src/components/TaskManager.js
 "use client";
+
 import { useDispatch, useSelector } from "react-redux";
 import { addTask, deleteTask, editTask } from "../tasksSlice";
 import { useState } from "react";

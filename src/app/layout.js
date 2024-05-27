@@ -1,13 +1,10 @@
+
 "use client";
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from "../theme";
+
+import Providers from "../providers";
 
 function Layout({ children }) {
-  return (
-    <ChakraProvider theme={theme}>
-      {children}
-    </ChakraProvider>
-  );
+  return <Providers>{children}</Providers>;
 }
 
 export default Layout;
