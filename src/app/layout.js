@@ -1,30 +1,13 @@
-"use client";
+// src/app/layout.js
+import { ChakraProvider } from "@chakra-ui/react";
+import theme from "../theme";
 
-import { Provider } from 'react-redux';
-import store from './store';
-import { Box, Container, Heading } from '@chakra-ui/react';
-import useDarkMode from './hooks/useDarkMode';
-
-const Layout = ({ children }) => {
+function Layout({ children }) {
   return (
-    <Provider store={store}>
-      <Box>
-        <header>
-          <Heading as="h1" size="lg" p={4} textAlign="center">
-            Task Manager
-          </Heading>
-        </header>
-        <Container maxW="md" mx="auto" p={5}>
-          {children}
-        </Container>
-        <footer>
-          <Box p={4} textAlign="center">
-            <useDarkMode />
-          </Box>
-        </footer>
-      </Box>
-    </Provider>
+    <ChakraProvider theme={theme}>
+      {children}
+    </ChakraProvider>
   );
-};
+}
 
 export default Layout;

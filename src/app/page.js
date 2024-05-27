@@ -1,26 +1,19 @@
-"use client";
-
-import { useEffect } from 'react';
-import { useDispatch } from 'react-redux';
-import { Box, Heading } from '@chakra-ui/react';
-import Layout from './layout';
-import TaskInput from './components/TaskInput';
-import TaskList from './components/TaskList';
-import { loadTasks } from './features/tasks/tasksSlice';
+// src/app/page.js
+import Layout from "./layout";
+import TaskManager from "../components/TaskManager";
+import SplashScreen from "../components/SplashScreen";
+import { useEffect, useState } from "react";
 
 export default function Page() {
-  const dispatch = useDispatch();
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    dispatch(loadTasks());
-  }, [dispatch]);
+    setTimeout(() => setLoading(false), 3000); // Show splash screen for 3 seconds
+  }, []);
 
   return (
     <Layout>
-      <Box>
-        <TaskInput />
-        <TaskList />
-      </Box>
+      {loading ? <SplashScreen /> : <TaskManager />}
     </Layout>
   );
 }
