@@ -1,7 +1,1 @@
-This task manager application includes:
-
-A form to add new tasks with text, category, and due date.
-A list of tasks where each task can be toggled as completed, edited, or deleted.
-A modal dialog for editing tasks.
-State management using Redux.
-UI components styled with Chakra UI.
+This Task Manager app, built with Next.js and Chakra UI, allows users to efficiently manage tasks with features to add, edit, delete, and mark tasks as complete. Each task includes a description, due date, category, and priority level. The app uses Redux for state management and provides user feedback through notifications. A splash screen enhances the initial user experience. The app's structure includes key components like `TaskManager`, `SplashScreen`, and a centralized state management slice (`tasksSlice.js`).
